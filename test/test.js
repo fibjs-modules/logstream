@@ -96,11 +96,6 @@ describe("LogStream", () => {
     str1 = fs.readFile(tmpFile).toString();
     assert(str === str1);
   });
-
-  it('should write background success', () => {
-    const fd = fs.open(tmpFile, 'w');
-    const bf = new LogStream(fd);
-  });
 });
 
 process.exit(test.run(console.DEBUG));
