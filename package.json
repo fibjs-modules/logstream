@@ -1,6 +1,6 @@
 {
   "name": "@fibjs/logstream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "wrap a file stream as a extremely high performance log stream.",
   "main": "lib/logstream.js",
   "scripts": {
