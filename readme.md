@@ -47,4 +47,4 @@ Please open an issue [here](https://github.com/fibjs-modules/logstream/issues).
 
 ## License
 
-[MIT](License)
+[MIT](LICENSE)
