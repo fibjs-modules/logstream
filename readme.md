@@ -34,7 +34,7 @@ $ npm i @fibjs/logstream --save
 const fs = require('fs');
 const LogStream = require('@fibjs/logstream');
 
-const fd = fs.open(tmpFile, 'w');
+const fd = fs.open('path to log file', 'w');
 const bf = new LogStream(fd);
 bf.writeText('some log');
 bf.writeLine('new line log');
@@ -47,4 +47,4 @@ Please open an issue [here](https://github.com/fibjs-modules/logstream/issues).
 
 ## License
 
-[MIT](LICENSE)
+[MIT](License)
