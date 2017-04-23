@@ -1,0 +1,33 @@
+{
+  "name": "logstream",
+  "version": "1.0.0",
+  "description": "wrap a file stream as a extremely high performance log stream.",
+  "main": "lib/logstream.js",
+  "scripts": {
+    "test": "fibjs test/test.js",
+    "ci": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibjs-modules/logstream.git"
+  },
+  "keywords": [
+    "log",
+    "stream",
+    "fibjs"
+  ],
+  "author": "ngot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fibjs-modules/logstream/issues"
+  },
+  "homepage": "https://github.com/fibjs-modules/logstream#readme",
+  "ci": {
+    "type": "travis"
+  },
+  "devDependencies": {
+    "@fibjs/ci": "^1.0.0",
+    "@fibjs/mkdirp": "^1.0.0",
+    "@fibjs/rmdirr": "^1.0.1"
+  }
+}
