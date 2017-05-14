@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/fibjs-modules/logstream#readme",
   "ci": {
-    "type": "travis"
+    "version": "0.3.0"
   },
   "devDependencies": {
-    "@fibjs/ci": "^1.0.0",
+    "@fibjs/ci": "^1.1.3",
     "@fibjs/mkdirp": "^1.0.0",
     "@fibjs/rmdirr": "^1.0.1"
   }
