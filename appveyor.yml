@@ -15,13 +15,21 @@ artifacts:
   - path: dist\fibjs
     name: fibjs
 deploy:
-  provider: GitHub
-  auth_token:
-    secure: ay2Xunjqz8yYKc1RsVj+EI0LGbVcj+f1U8ExhwIqih7rgFx3hdqiP0HOzbKriGZJ
-  artifact: /.*/
-  draft: false
-  prerelease: false
-  on:
-    appveyor_repo_tag: true
+  - provider: GitHub
+    auth_token:
+      secure: ay2Xunjqz8yYKc1RsVj+EI0LGbVcj+f1U8ExhwIqih7rgFx3hdqiP0HOzbKriGZJ
+    artifact: /.*/
+    draft: false
+    prerelease: false
+    on:
+      appveyor_repo_tag: true
+  - provider: FTP
+    protocol: sftp
+    host: fibjs.org
+    username: ngot
+    password:
+      secure: kJWeHMUeFh2hk9iq9mtvtA==
+    folder: downloads/!APPVEYOR_REPO_TAG_NAME!/
+    artifact:  /.*/
 
 build: off
