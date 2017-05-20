@@ -29,6 +29,6 @@ deploy:
     username: ngot
     password:
       secure: kJWeHMUeFh2hk9iq9mtvtA==
-    folder: downloads/%APPVEYOR_REPO_TAG_NAME%/
+    folder: downloads/
 
 build: off
