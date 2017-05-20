@@ -11,5 +11,17 @@ install:
 
 test_script:
   - npm run ci
+artifacts:
+  - path: dist\fibjs
+    name: fibjs
+deploy:
+  provider: GitHub
+  auth_token:
+    secure: 16VBdcQ419efvcrd4msOXpevoyHAo+oe5Xyq0bmw4DU+UNSf5cNoJwbOvB5LLve2
+  artifact: /.*/
+  draft: false
+  prerelease: false
+  on:
+    appveyor_repo_tag: true
 
 build: off
