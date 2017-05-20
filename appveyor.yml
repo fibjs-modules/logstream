@@ -9,16 +9,16 @@ environment:
 #   - If Not Exist "node_modules\.bin" (mkdir node_modules\.bin)
 #   - curl -fsSL -o node_modules\.bin\fibjs.exe "https://github.com/fibjs/fibjs/releases/download/v%VERSION%/fibjs-windows-x64.exe"
 
-# test_script:
-#   - npm run ci
+test_script:
+  - mkdir %APPVEYOR_REPO_TAG_NAME%
+  - copy .\dist\fibjs .\%APPVEYOR_REPO_TAG_NAME%\fibjs.exe
 artifacts:
-  - path: dist\fibjs
-    name: fibjs
+  - path: .\%APPVEYOR_REPO_TAG_NAME%\fibjs.exe
+    name: fibjs.exe
 deploy:
   - provider: GitHub
     auth_token:
       secure: ay2Xunjqz8yYKc1RsVj+EI0LGbVcj+f1U8ExhwIqih7rgFx3hdqiP0HOzbKriGZJ
-    # artifact: /fibjs.*/
     draft: false
     prerelease: false
     on:
@@ -30,6 +30,5 @@ deploy:
     password:
       secure: kJWeHMUeFh2hk9iq9mtvtA==
     folder: downloads/%APPVEYOR_REPO_TAG_NAME%/
-    # artifact:  /fibjs.*/
 
 build: off
