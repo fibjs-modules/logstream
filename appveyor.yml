@@ -18,7 +18,7 @@ deploy:
   - provider: GitHub
     auth_token:
       secure: ay2Xunjqz8yYKc1RsVj+EI0LGbVcj+f1U8ExhwIqih7rgFx3hdqiP0HOzbKriGZJ
-    artifact: /fibjs.*/
+    # artifact: /fibjs.*/
     draft: false
     prerelease: false
     on:
@@ -30,6 +30,6 @@ deploy:
     password:
       secure: kJWeHMUeFh2hk9iq9mtvtA==
     folder: downloads/%APPVEYOR_REPO_TAG_NAME%/
-    artifact:  /fibjs.*/
+    # artifact:  /fibjs.*/
 
 build: off
